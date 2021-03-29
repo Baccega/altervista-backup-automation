@@ -4,6 +4,8 @@ declare global {
       NODE_ENV: 'development' | 'production'
       TELEGRAM_TOKEN: string
       TELEGRAM_USER_ID: string
+      ALTERVISTA_WEBSITE: string
+      ALTERVISTA_PASSWORD: string
     }
   }
 }
