@@ -12,3 +12,5 @@ node_modules
 # Keys
 key.rsa
 key.rsa.pub
+
+backups
