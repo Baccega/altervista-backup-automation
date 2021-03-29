@@ -1,0 +1,14 @@
+# Dependency directory
+# Deployed apps should consider commenting this line out:
+# see https://npmjs.org/doc/faq.html#Should-I-check-my-node_modules-folder-into-git
+node_modules
+
+# Ignore .env configuration files
+.env
+
+# Ignore .DS_Store files on OS X
+.DS_Store
+
+# Keys
+key.rsa
+key.rsa.pub
