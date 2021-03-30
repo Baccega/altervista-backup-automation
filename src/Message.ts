@@ -1,6 +1,7 @@
 import moment from 'moment'
 
 const WARNING_ICON = '⚠️'
+const BACKUP_ICON = '🗄'
 const COMPLETED_ICON = '🟢'
 const FAILED_ICON = '🔴'
 
@@ -15,7 +16,7 @@ export function createMessage({ completed, time }: CreateMessageProps): string {
 
   const statusIcon = completed ? COMPLETED_ICON : FAILED_ICON
 
-  const rows = [`${devWarning}${statusIcon} <b>Backup gestionale-bertazzo</b>`, `${formattedTime}`]
+  const rows = [`${devWarning}${BACKUP_ICON}${statusIcon} <b>Backup gestionale-bertazzo</b>`, `${formattedTime}`]
 
   const formattedRows = rows.map((cur) => cur.replace(/\./g, ','))
   return formattedRows.join('\n')
