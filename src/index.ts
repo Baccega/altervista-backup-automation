@@ -7,9 +7,10 @@ import moment from 'moment'
 dotenv.config()
 
 async function main() {
-  const { completed } = await downloadBackup({ filename: `backup-${moment().format('DD-MM-YYYY')}` })
+  const today = moment()
+  const { completed } = await downloadBackup({ filename: `backup-${today.format('DD-MM-YYYY')}` })
 
-  const message = createMessage({ completed, time: new Date() })
+  const message = createMessage({ completed, today })
 
   await sendTelegramMessage(message)
 

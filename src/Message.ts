@@ -1,4 +1,4 @@
-import moment from 'moment'
+import { Moment } from 'moment'
 
 const WARNING_ICON = '⚠️'
 const BACKUP_ICON = '🗄'
@@ -7,16 +7,16 @@ const FAILED_ICON = '🔴'
 
 type CreateMessageProps = {
   completed: boolean
-  time: Date
+  today: Moment
 }
 
-export function createMessage({ completed, time }: CreateMessageProps): string {
+export function createMessage({ completed, today }: CreateMessageProps): string {
   const devWarning = process.env.NODE_ENV === 'development' ? `${WARNING_ICON} DEV  ` : ''
-  const formattedTime = moment(time).format('DD MMMM YYYY')
+  const formattedToday = today.format('DD MMMM YYYY')
 
   const statusIcon = completed ? COMPLETED_ICON : FAILED_ICON
 
-  const rows = [`${devWarning}${BACKUP_ICON}${statusIcon} <b>Backup gestionale-bertazzo</b>`, `${formattedTime}`]
+  const rows = [`${devWarning}${BACKUP_ICON}${statusIcon} <b>Backup gestionale-bertazzo</b>`, `${formattedToday}`]
 
   const formattedRows = rows.map((cur) => cur.replace(/\./g, ','))
   return formattedRows.join('\n')
