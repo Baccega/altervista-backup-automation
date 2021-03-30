@@ -9,7 +9,7 @@ After cloning you need to create a `.env` file with the following data:
 ```
 NODE_ENV=production                           # Or 'development'
 
-ALTERVISTA_USERNAME=YOUR_ALTERVISTA_USERNAME    # Usually XXXX.altervista.org
+ALTERVISTA_USERNAME=YOUR_ALTERVISTA_USERNAME
 ALTERVISTA_PASSWORD=YOUR_ALTERVISTA_PASSWORD 
 
 TELEGRAM_TOKEN=YOUR_TELEGRAM_BOT_TOKEN        # Generated with a new bot
