@@ -8,7 +8,7 @@ dotenv.config()
 
 async function main() {
   const today = moment()
-  const { completed } = await downloadBackup({ filename: `backup-${today.format('DD-MM-YYYY')}` })
+  const { completed } = await downloadBackup({ filename: `backup-${today.format('YYYY-MM-DD')}` })
 
   const message = createMessage({ completed, today })
 
