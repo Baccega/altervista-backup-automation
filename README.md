@@ -18,6 +18,6 @@ TELEGRAM_USER_ID=YOUR_TELEGRAM_USER_ID        # Fetch that using the `/getUpdate
 Then you just:
 
 ```bash
-yarn 
-yarn start
+npm install
+npm start
 ```
