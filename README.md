@@ -1,4 +1,4 @@
-# altervista-backup-automations
+# ⚙️🗄 Altervista Backup Automation
 
 A script that download a backup of your's Altervista MySQL database and sends you a telegram message as a notification (using a Bot).
 
