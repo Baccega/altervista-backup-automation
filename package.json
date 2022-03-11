@@ -1,5 +1,5 @@
 {
-  "name": "altervista-backup-automations",
+  "name": "altervista-backup-automation",
   "version": "1.0.0",
   "description": "A script that download a backup of your's Altervista MySQL database and sends you a telegram message as a notification (using a Bot)",
   "main": "index.ts",
@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "start": "ts-node src/index.ts",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "build-docker": "docker build -t altervista-backup-automation ."
   },
   "prettier": {
     "semi": false,
@@ -19,18 +20,18 @@
   },
   "dependencies": {
     "@types/dotenv": "^8.2.0",
-    "@types/node": "^13.11.0",
-    "@types/node-fetch": "^2.5.8",
-    "@typescript-eslint/eslint-plugin": "^4.20.0",
-    "@typescript-eslint/parser": "^4.20.0",
+    "@types/node": "^13.13.52",
+    "@types/node-fetch": "^2.6.1",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
     "crypto": "^1.0.1",
-    "dotenv": "^8.2.0",
-    "eslint": "^7.23.0",
+    "dotenv": "^8.6.0",
+    "eslint": "^7.32.0",
     "moment": "^2.29.1",
-    "node-fetch": "^2.6.1",
-    "playwright": "^1.10.0",
+    "node-fetch": "^2.6.7",
+    "playwright": "^1.19.2",
     "ts-node": "^8.8.1",
-    "typescript": "^4.2.3"
+    "typescript": "^4.6.2"
   },
   "devDependencies": {}
 }

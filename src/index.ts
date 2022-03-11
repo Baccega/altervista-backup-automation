@@ -14,13 +14,14 @@ async function main() {
 
   const message = createMessage({ completed, today })
 
-  const isEqualToLastBackup = await equalToLastBackup()
-  const isSendingTelegramMessage = !completed || !isEqualToLastBackup
+  // const isEqualToLastBackup = await equalToLastBackup()
+  // const isSendingTelegramMessage = !completed || !isEqualToLastBackup
+  const isSendingTelegramMessage = !completed
 
-  if (isEqualToLastBackup) {
-    console.log('Deleting duplicated backup')
-    await deleteNewBackup(newBackupName)
-  }
+  // if (isEqualToLastBackup) {
+  //   console.log('Deleting duplicated backup')
+  //   await deleteNewBackup(newBackupName)
+  // }
 
   if (isSendingTelegramMessage) {
     console.log('Sending Telegram Message:')
