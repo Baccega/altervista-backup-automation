@@ -16,7 +16,7 @@ async function main() {
 
   // const isEqualToLastBackup = await equalToLastBackup()
   // const isSendingTelegramMessage = !completed || !isEqualToLastBackup
-  const isSendingTelegramMessage = !completed
+  const isSendingTelegramMessage = true
 
   // if (isEqualToLastBackup) {
   //   console.log('Deleting duplicated backup')
