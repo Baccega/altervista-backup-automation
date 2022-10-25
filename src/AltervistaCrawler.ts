@@ -48,10 +48,10 @@ export async function downloadBackup({ filename }: DownloadBackupProps): Promise
     await devScreenshot(page, 'selected-database')
 
     await page.click('text="Export"')
-    await Promise.all([page.waitForSelector('text="Go"'), page.waitForTimeout(1000)])
+    await Promise.all([page.waitForSelector('#buttonGo >> text=Export'), page.waitForTimeout(1000)])
     await devScreenshot(page, 'export-page')
 
-    const [download] = await Promise.all([page.waitForEvent('download'), page.click('text="Go"')])
+    const [download] = await Promise.all([page.waitForEvent('download'), page.click('#buttonGo >> text=Export')])
     await download.saveAs(`./backups/${filename}.sql`)
 
     await browser.close()
